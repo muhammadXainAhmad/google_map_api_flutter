@@ -28,7 +28,7 @@ class _LatLngToAddressState extends State<LatLngToAddress> {
                     31.512314994592337,
                     74.32827221443432,
                   );
-                  Placemark placemark = placemarks.reversed.last;
+                  Placemark placemark = placemarks.first;
                   setState(() {
                     address =
                         "${placemark.name}, ${placemark.street}, ${placemark.subAdministrativeArea}, ${placemark.country}";
@@ -50,7 +50,7 @@ class _LatLngToAddressState extends State<LatLngToAddress> {
                   );
                   setState(() {
                     coordinates =
-                        "${locations.last.latitude.toString()}, ${locations.last.longitude.toString()}";
+                        "${locations.first.latitude.toString()}, ${locations.first.longitude.toString()}";
                   });
                 },
                 child: Text(
